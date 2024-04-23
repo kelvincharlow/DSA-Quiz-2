@@ -1,0 +1,42 @@
+#include <iostream>
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(nullptr) {}
+};
+
+ListNode* reverseList(ListNode* head) {
+    ListNode* prev = nullptr;
+    ListNode* current = head;
+    
+    while (current) {
+        ListNode* nextNode = current->next;
+        current->next = prev;
+        prev = current;
+        current = nextNode;
+    }
+    
+    return prev;
+}
+#include <iostream>
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(nullptr) {}
+};
+
+ListNode* reverseList(ListNode* head) {
+    ListNode* prev = nullptr;
+    ListNode* current = head;
+    
+    while (current) {
+        ListNode* nextNode = current->next;
+        current->next = prev;
+        prev = current;
+        current = nextNode;
+    }
+    
+    return prev;
+}
